@@ -25,4 +25,9 @@ There's nothing technically wrong with this at all; this is entirely accurate Ja
 There are also a couple of potential issues with this version that isn't using composition. If the user's link to GitHub is needed somewhere else, then duplicate code would be needed.
 A good function should follow the "DOT" rule:
 
-> Do One Thing
+> Do One Thing.  
+
+In the composed version, each function just does one thing:  
+- `getProfileLink` – just builds up a string of the user's GitHub profile link  
+- `getProfilePic` – just builds up a string the user's GitHub profile picture  
+- `getProfileData` – returns a new object
