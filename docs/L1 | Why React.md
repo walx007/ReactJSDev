@@ -30,4 +30,20 @@ A good function should follow the "DOT" rule:
 In the composed version, each function just does one thing:  
 - `getProfileLink` – just builds up a string of the user's GitHub profile link  
 - `getProfilePic` – just builds up a string the user's GitHub profile picture  
-- `getProfileData` – returns a new object
+- `getProfileData` – returns a new object .
+
+##### React & Composition  
+React makes use of the power of composition, heavily! React builds up pieces of a UI using components. Let's take a look at some pseudo code for an example. Here are three different components:
+
+> <Page />
+> <Article />
+> <Sidebar />  
+Now let's take these simple components, combine them together, and create a more complex component (aka, composition in action!):
+
+> <Page>
+> <Article />
+> <Sidebar />
+> </Page>  
+Now the Page component has the Article and Sidebar components inside. This is just like the earlier example where getProfileData had getProfileLink and getProfilePic inside it.
+
+We'll dig into components soon, but just know that composition plays a huge part in building React components.
