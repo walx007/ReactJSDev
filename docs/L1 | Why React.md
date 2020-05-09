@@ -1,3 +1,6 @@
+https://www.linkedin.com/pulse/compose-me-function-composition-javascript-kevin-greene  
+https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10
+
 #### Why React  
 There 4 things that make React Special-  
 1. It's Composition Modal.
@@ -33,17 +36,6 @@ In the composed version, each function just does one thing:
 - `getProfileData` – returns a new object .
 
 ##### React & Composition  
-React makes use of the power of composition, heavily! React builds up pieces of a UI using components. Let's take a look at some pseudo code for an example. Here are three different components:
+React makes use of the power of composition, heavily! React builds up pieces of a UI using components.
 
-> <Page />
-> <Article />
-> <Sidebar />  
-Now let's take these simple components, combine them together, and create a more complex component (aka, composition in action!):
 
-> <Page>
-> <Article />
-> <Sidebar />
-> </Page>  
-Now the Page component has the Article and Sidebar components inside. This is just like the earlier example where getProfileData had getProfileLink and getProfilePic inside it.
-
-We'll dig into components soon, but just know that composition plays a huge part in building React components.
