@@ -11,34 +11,18 @@ In programing context ,Composition occurs when simple functions are combined tog
 - A good function should follow the "DOT" rule:
 > Do One Thing  
 
-Composition is built from simple functions. Let's look at an example:
-
-function getProfileLink (username) {
- return 'https://github.com/' + username
-}
+Composition is built from simple functions. Let's look at an example:  
+```function getProfileLink (username) { return 'https://github.com/' + username }```  
 This function is ridiculously simple, isn't it? It's just one line! Similarly, the getProfilePic function is also just a single line:
-
-function getProfilePic (username) {
- return 'https://github.com/' + username + '.png?size=200'
-}  
+```function getProfilePic (username) {return 'https://github.com/' + username + '.png?size=200'}```  
 These are definitely simple functions, so to compose them, we'd just combine them together inside another function:
 
->function getProfileData (username) {
-> return {
->pic: getProfilePic(username),
-> link: getProfileLink(username)
-> }
->}  
+```function getProfileData (username) { return {pic: getProfilePic(username), link: getProfileLink(username) }} ```   
 Now we could have written getProfileData without composition by providing the data directly:
 
-> getProfileData (username) {
- >return {
- >pic: 'https://github.com/' + username + '.png?size=200',
- >link: 'https://github.com/' + username
- >}
->}  
+```getProfileData (username) {return {pic: 'https://github.com/' + username + '.png?size=200',link: 'https://github.com/' + username}}```  
 There's nothing technically wrong with this at all; this is entirely accurate JavaScript code. But this isn't composition. 
 There are also a couple of potential issues with this version that isn't using composition. If the user's link to GitHub is needed somewhere else, then duplicate code would be needed.
 A good function should follow the "DOT" rule:
 
->Do One Thing
+> Do One Thing
