@@ -1,0 +1,30 @@
+#### Data Flow in React
+> ##### Data Flow in React Recap  
+> In React, data flows in only one direction, from parent to child. If data is shared between sibling child components,
+> then the data should be stored in the parent component and passed to both of the child components that need it.
+
+- Before React ,the one popular technique to manage state changes in an app over time was to use *data bindings*.  
+- Benefit of **data binding**- When data changes in one place that changes automatically reflected into other places in the app.  
+- Any part of the app that had the data could also change it so as the app grows this technique make it difficult to determine how a change in
+one place automatically and implicitly affects rest of the app.  
+- React uses expilicit method for passing data btw components that makes it easier to track changes and how they affect other places of the app.
+This is called unidirectional data flow ,bcoz data flows from parent to child components.
+
+#### Data-Binding In Other Frameworks  
+Front-end frameworks like Angular and Ember make use of two-way data bindings. In two-way data binding, the data is kept in sync throughout the app no matter where it is updated. If a model changes the data, then the data updates in the view. Alternatively, if the user changes the data in the view, then the data is updated in the model. Two-way data binding sounds really powerful,
+but it can make the application harder to reason about and know where the data is actually being updated.  
+##### Further Research  
+- Angular's two-way data binding  [https://angular.io/guide/template-syntax#two-way] 
+- Ember's two-way data binding [https://guides.emberjs.com/v2.13.0/object-model/bindings/]
+
+### React's Data-flow  
+Data moves differently with React's unidirectional data flow. In React, the data flows from the parent component to a child component.
+- The data lives in the parent component and is passed down to the child component. Even though the data lives in the parent component, both the parent and the child components can use the data.  
+- if the data must be updated, then only the parent component should perform the update. If the child component needs to make a change to the data, then it would send the updated data to the parent component where the change will actually be made.
+Once the change _is_ made in the parent component, the child component will be passed the data (that has just been updated!).  
+ 
+ - Now, this might seem like extra work, but having the data flow in one direction and having one place where the data is modified makes it much easier to understand how the application works.
+Note:-  
+- parent component and stores the data, any changes to the data should be made by this component.  
+- The component that stores the data should be the one that updates the data.
+
