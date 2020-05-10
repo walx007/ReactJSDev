@@ -6,7 +6,8 @@
 
 ## Lesson 2
 
-- React uses it's ````.createElement()``` to create elements .This method takes in a description of an element and **returns a plain JavaScript object**.  
+- React uses it's ```.createElement()``` to create elements .This method takes in a description of an element and **returns a plain JavaScript object**.  
+
 Syntax:  
 ```React.createElement( /* type */, /* props */, /* content */ );```  
 
@@ -37,7 +38,22 @@ Let's break down what each item can be:
  #### Rendering Elements onto the DOM  
  In the previous video, we used ReactDOM's render() method to render our element onto a particular area of a page. 
  In particular, we rendered the element onto a DOM node called root. But where did this root come from?  
- Apps built with React typically have a single root DOM node. For example, an HTML file may contain a `<div id="root"></div>`.  
+ Apps built with React typically have a single root DOM node. For example, an HTML file may contain a `<div id="root"></div>`. 
+ 
+ ##### JSX | JSX Returns One Main Element, Too just like create element.
+ however, we use a syntax extension to describe what your UI should look like. This syntax extension is known as JSX, and just looks similar to plain HTML written right into a JavaScript file. The JSX gets transpiled to React's .createElement() method that outputs HTML to be rendered in the browser.
+ 
+ ##### Intro to Components
+So far we've seen how .createElement() and JSX can help us produce some HTML. Typically, though, we'll use one of React's key features, Components, to construct our UI. Components refer to reusable pieces of code ultimately responsible for returning HTML to be rendered onto the page. More often than not, you'll see React components written with JSX.  
+
+Since React's main focus is to streamline building our app's UI, there is only one method that is absolutely required in any React component class: render().
+
+#### 💡 Declaring Components in React 💡, we defined the ContactList component like so:
+
+```class ContactList extends React.Component {// ...}```  
+  OR 
+ ``` class ContactList extends Component {// ...}``` in this case adjust imports ex- ```import React, { Component } from 'react';```
+
   
   
   
